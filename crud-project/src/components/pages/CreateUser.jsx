@@ -15,7 +15,7 @@ const CreateUser = () => {
         company : company,
         salary: salary
       }
-        axios.post("http://localhost:4001/submit",payload)
+        axios.post("https://mern-project1-employee-registration-form.onrender.com/submit",payload)
         .then(()=>{console.log("data send to backend"); navigate("/users")})
         .catch(()=>{console.log("unable to send data from frontend...!!");})
     }

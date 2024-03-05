@@ -5,12 +5,12 @@ const Users = () => {
   let [allUsers, setAllUsers] = useState([])
   let[reload, setReload] = useState(0)
   useEffect(()=>{
-    axios.get("http://localhost:4001/users")
+    axios.get("https://mern-project1-employee-registration-form.onrender.com/users")
     .then((e)=>{setAllUsers(e.data); setReload(1)})
   },[reload])
 
   let deleteUser = (e)=>{
-    axios.delete(`http://localhost:4001/users/${e}`)
+    axios.delete(`https://mern-project1-employee-registration-form.onrender.com/users/${e}`)
     .then(()=>{setReload(2)})
   }
 
